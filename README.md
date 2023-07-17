@@ -1,2 +1,2 @@
-#dns-tester
-# dns-tester
+#DNS Tester 
+# Simple Pentest 
