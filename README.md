@@ -3,13 +3,27 @@
 #### Simple Pentest tool to find the DNS just testing sub-domains of a URL.
 
 ### Install Socket Library
+##### Linux
 ```
-python3-pip install socket
+python3-pip install dns-resolver
 ```
-### Import Socket on project
+##### Windows
 ```
-import socket
+pip install dns-resolver
 ```
+
+### Import on project
+```
+import dns.resolver
+```
+
+### Creat the Resolver object
+```
+import dns.resolver
+
+res = dns.resolver.Resolver()
+```
+
 ### OS Used
 > Kali Linux VM
 > 
