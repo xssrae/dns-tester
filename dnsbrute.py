@@ -1,17 +1,17 @@
 import dns.resolver
 
 res = dns.resolver.Resolver()
-arquivo = open("/home/kali/subdomains-10000.txt", "r")
-subdominios = arquivo.read().splitlines()
+file = open("/home/kali/subdomains-10000.txt", "r")
+subdomains = file.read().splitlines()
 
-alvo = ''
-alvo = input("Enter site's URL: ")
+target = ''
+target = input("Enter site's URL: ")
 
-for subdominio in subdominios:
+for subdomain in subdomains:
 	try:
-		sub_alvo = subdominio + "." + alvo 
-		resultado = res.resolve(sub_alvo, "A")
-		for ip in resultado:
-			print(sub_alvo, "->", ip)
+		sub_target = subdomain + "." + target 
+		result = res.resolve(sub_target, "A")
+		for ip in result:
+			print(sub_target, "->", ip)
 	except:
 		pass
